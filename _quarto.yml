@@ -7,8 +7,12 @@ website:
     left:
       - href: index.qmd
         text: Home
+    tools:
+      - icon: github
+        href: https://github.com/noahabe/practical_cryptography_in_python_answers.git
   sidebar: 
     style: "docked"
+    collapse-level: 1
     search: false 
     contents: auto
 
