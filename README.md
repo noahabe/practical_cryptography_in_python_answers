@@ -16,3 +16,10 @@ cryptography==40.0.2
 gmpy2==2.1.5
 pycparser==2.21
 ```
+
+TODO
+----
+[] I am currently migrating to a "
+[Jupyter notebook](https://jupyter.org/) & 
+[quarto rendering](https://quarto.org/)"
+workflow.
