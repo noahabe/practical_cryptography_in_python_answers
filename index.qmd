@@ -1,7 +1,11 @@
 ---
-title: "."
+title: "Practical Cryptography in Python Answers"
 ---
 
-This is a Quarto website.
+Solutions to the book "Practical Cryptography in Python"
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+![PCIP](PCIP.jpeg)
+
+[Here](https://www.oreilly.com/library/view/practical-cryptography-in/9781484249000/) 
+is a link to the book.
+

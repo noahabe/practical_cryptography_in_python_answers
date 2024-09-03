@@ -72,9 +72,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": ".",
+    "title": "Practical Cryptography in Python Answers",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Solutions to the book “Practical Cryptography in Python”\n\n\n\nPCIP\n\n\nHere is a link to the book."
   },
   {
     "objectID": "Ch5_Message_Integrity_Signatures_and_Certificates/5.1.html",
@@ -170,7 +170,7 @@
   {
     "objectID": "Ch2_Hashing/2.4.html",
     "href": "Ch2_Hashing/2.4.html",
-    "title": ".",
+    "title": "Practical Cryptography In Python",
     "section": "",
     "text": "MD5 OF A FILE\nWrite a python program that computes the MD5 sum of the data in a file. You don’t need to worry about any of the file’s metadata, such as last modified time or even the file’s name, only its contents.\n\n\n# ex2_4.py \n\nimport hashlib\nimport sys\n\ndef md5_a_file(filename: str)-&gt;str:\n    h = hashlib.md5()\n    with open(filename, 'rb') as f: \n        data = f.read(4096)\n        while data != b'': \n            h.update(data)\n            data = f.read(4096)\n    return h.hexdigest() \n\nif __name__ == '__main__': \n    if len(sys.argv) != 2: \n        print(\"Usage: python3 ex2_4.py &lt;filename&gt;\")\n        exit(-1)\n    filename = sys.argv[1]\n    print(md5_a_file(filename))\nThe following shows how to use the above script to md5 a \\(350\\) megabyte video file:\n\nWe can see that, we got the same result, as that of the program md5sum:"
   },
@@ -240,7 +240,7 @@
   {
     "objectID": "Ch2_Hashing/2.3.html",
     "href": "Ch2_Hashing/2.3.html",
-    "title": ".",
+    "title": "Practical Cryptography In Python",
     "section": "",
     "text": "Observing Avalanche\nCompare the bit changes between a wide range of input values.\n\n\nThe following function observe_avalanche(x1, x2) is used to count the bit changes or differences between \\(\\text{md5}(x_1)\\) and \\(\\text{md5}(x_2)\\):\n# assume this code is stored inside of a file called: ex2_3.py\n\nimport hashlib\n\nh = lambda x : hashlib.md5(x).hexdigest()\n\ndef observe_avalanche(x1: bytes, x2: bytes) -&gt; int: \n    y1 = h(x1)\n    y2 = h(x2)\n\n    change_to_binary = lambda x : bin(int(x,16))[2:]\n\n    b_y1 = change_to_binary(y1)\n    b_y2 = change_to_binary(y2)\n\n    if len(b_y1) != 128: \n        b_y1 = ('0' * (128 - len(b_y1))) + b_y1\n\n    if len(b_y2) != 128: \n        b_y2 = ('0' * (128 - len(b_y2))) + b_y2\n    \n    # counter is the number of bits that are different in \n    # digests of x1 and x2. \n    counter = 0\n    for x, y in zip(b_y1, b_y2): \n        if x != y: \n            counter += 1 \n    return counter\nThe following shows the usage of the above function:"
   },
