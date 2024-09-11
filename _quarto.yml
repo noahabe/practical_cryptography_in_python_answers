@@ -4,6 +4,7 @@ project:
 website:
   title: "Practical Cryptography In Python"
   navbar:
+    background: primary
     left:
       - href: index.qmd
         text: Home
@@ -11,7 +12,7 @@ website:
       - icon: github
         href: https://github.com/noahabe/practical_cryptography_in_python_answers.git
   sidebar: 
-    style: "docked"
+    style: "floating"
     collapse-level: 1
     search: false 
     contents: auto
