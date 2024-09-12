@@ -17,9 +17,5 @@ gmpy2==2.1.5
 pycparser==2.21
 ```
 
-TODO
-----
-[] I am currently migrating to a "
-[Jupyter notebook](https://jupyter.org/) & 
-[quarto rendering](https://quarto.org/)"
-workflow.
+You can look [here](https://pcip-3fded.web.app/) for the hosted version of the 
+website.
