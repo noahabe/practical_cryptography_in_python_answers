@@ -1,3 +1,6 @@
+#ignore some private files
+PRIVATE_README.md
+
 # ignore firebase files
 .firebase/ 
 .firebaserc 
