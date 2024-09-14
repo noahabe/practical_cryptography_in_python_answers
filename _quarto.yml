@@ -1,5 +1,10 @@
 project:
   type: website
+  render: 
+    - "*.md"
+    - "*.qmd"
+    - "*.ipynb"
+    - "!PRIVATE_README.md"
 
 website:
   title: "Practical Cryptography In Python"
