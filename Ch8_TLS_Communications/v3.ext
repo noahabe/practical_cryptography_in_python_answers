@@ -1,0 +1,2 @@
+keyUsage=digitalSignature
+basicConstraints=CA:FALSE
